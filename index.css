@@ -4,31 +4,56 @@ main {
   flex-direction: column;
   align-items: center;
   margin: auto;
+  padding: 20px; 
 }
 
 #guess {
   width: 5em;
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 #reset {
   margin: 20px;
   background-color: green;
-  color: white; 
-  padding: 5px; 
-  border: none; 
-  cursor: pointer; 
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#reset:hover {
+  background-color: darkgreen;
 }
 
 #submit {
-  background-color: forestgreen; 
-  color: white; 
-  padding: 3px; 
-  border: none; 
-  cursor: pointer; 
-  font-size: 16px; 
-  transition: background-color 0.3s ease; 
+  background-color: forestgreen;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 #submit:hover {
-  background-color: darkgreen; 
+  background-color: darkgreen;
+}
+
+#submit:focus,
+#reset:focus,
+#guess:focus {
+  outline: 2px solid #ff6347; /* Highlight buttons and input on focus for accessibility */
+}
+
+@media (max-width: 768px) {
+  #guess {
+    width: 4em; /* Smaller input field for mobile */
+  }
+  #submit, #reset {
+    width: 100%; /* Buttons take full width on smaller screens */
+  }
 }
